@@ -40,19 +40,8 @@ const questions = [
 // TODO: Create a function to write README file
 function writeToFile(res) {
     const fs = require('fs');
-    fs.appendFile('README.md', `
-    # ${res.titleQ}
-    
-    ## Project Description
-    ${res.descriptionQ}
-    ## How to install
-    ${res.instalQ}
-    ## Usage Information
-    ${res.usageQ}
-    ## Contribution Guidlines
-    ${res.contQ}
-    ## Test Instructions
-    ${res.testQ}
+    fs.appendFile('README.md', 
+    `# ${res.titleQ}\n## Project Description\n${res.descriptionQ}\n## How to install\n${res.instalQ}\n## Usage Information\n${res.usageQ}\n## Contribution Guidlines\n${res.contQ}\n## Test Instructions\n${res.testQ}
     `, (err) => err ? console.error(err) : console.log('Commit logged!'));
 }
 
